@@ -1,0 +1,59 @@
+/* Colors (desktop & mobile)*/
+/* Fonts */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Cairo, Arial, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(#12161c, #00bcd4, #3e4b58);
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: #12161c;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: ivory;
+}
+.output .previous-operand {
+  font-size: 1.25rem;
+}
+.output .current-operand {
+  font-size: 2rem;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+.calculator-grid button {
+  cursor: pointer;
+  font-size: 1.75rem;
+  color: ivory;
+  border: 1px solid ivory;
+  border-radius: 5px;
+  outline: none;
+  background-color: #3e4b58;
+}
+.calculator-grid button.span-two {
+  grid-column: span 2;
+}
+.calculator-grid button:hover {
+  color: #12161c;
+  background-color: #ff9800;
+}
